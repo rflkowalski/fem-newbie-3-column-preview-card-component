@@ -88,5 +88,120 @@ select {
     }
 }
 
-/* font-family: 'Big Shoulders Display', cursive; */
-/* font-family: 'Lexend Deca', sans-serif; */
+a,
+a:focus,
+a:visited {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+}
+
+.container {
+    max-width: 20.25rem;
+    margin: 5.625rem auto 5.625rem auto;
+}
+
+.card {
+    padding: 3rem;
+}
+
+.card:first-of-type {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card:last-of-type {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.card__header {
+    margin-top: 2.625rem;
+    margin-bottom: 2.625rem;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: var(--fs-500);
+    font-weight: var(--fw-500);
+    color: var(--clr-neutral-200);
+}
+
+.card--orange {
+    background-color: var(--clr-primary-300);
+}
+
+.card--dark-cyan {
+    background-color: var(--clr-primary-600);
+}
+
+.card--very-dark-cyan {
+    background-color: var(--clr-primary-700);
+}
+
+.card__paragraph {
+    margin-bottom: 2rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: var(--clr-neutral-100);
+    line-height: 1.8;
+}
+
+.card__btn {
+    background-color: var(--clr-neutral-200);
+    padding: 0.875rem 2rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    border: 2px solid var(--clr-neutral-100);
+    border-radius: 5rem;
+    transition: all 0.3s ease;
+}
+
+.card__btn--orange {
+    color: var(--clr-primary-300);
+}
+
+.card__btn--dark-cyan {
+    color: var(--clr-primary-600);
+}
+
+.card__btn--very-dark-cyan {
+    color: var(--clr-primary-700);
+}
+
+.card__btn:hover {
+    color: var(--clr-neutral-200);
+    background-color: transparent;
+}
+
+@media (min-width: 36rem) {
+    main {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        place-items: center;
+    }
+    .container {
+        max-width: 57.5rem;
+        margin: 0;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card:first-of-type {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+
+    .card:last-of-type {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+    }
+
+    .card__paragraph {
+        margin-bottom: 5.25rem;
+    }
+} ;
